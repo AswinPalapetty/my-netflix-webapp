@@ -1,0 +1,76 @@
+.posterRow{
+    color: #fff;
+}
+
+.posterRow .title{
+    width: 100%;
+}
+
+.posters{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y:hidden ;
+}
+
+.posters::-webkit-scrollbar{
+    display: none;
+}
+
+.poster-details{
+    cursor: pointer;
+}
+
+.poster-details:hover{
+    transform: scale(1.1);
+}
+
+.poster{
+    max-width: 100%;
+    padding: 5px;
+}
+
+.posterName{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.view-all-btn{
+    font-weight: 500;
+    margin-left : auto;
+    cursor : pointer;
+}
+
+.view-all-btn:hover{
+    color: red;
+}
+
+.modal-content{
+    background-color: transparent;
+}
+
+@media screen and (min-width : 768px){
+
+  .modal-content{
+        width: 560px;
+        height: 315px;
+    }
+
+     .youtube-video{
+        width: 560px;
+        height: 315px;
+    }
+}
+
+@media screen and (max-width : 767px){
+  .modal-content{
+        height: 190px;
+        width: 100%;
+    }
+
+     .youtube-video{
+        height: 190px;
+        width: 100%;
+    }
+}

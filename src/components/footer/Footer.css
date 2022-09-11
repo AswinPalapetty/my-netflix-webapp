@@ -1,0 +1,32 @@
+.footer{
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.footer .options{
+    cursor: pointer;
+    margin: 5px;
+    margin-bottom: 5px;
+}
+.footer .options:hover{
+    color:red;
+    text-decoration: underline;
+}
+
+.footer .copyright{
+    color:#8f8d8d;
+    content: "/a";
+    white
+}
+
+.footer .developer{
+    color: red;
+    cursor: pointer;
+}
+
+.footer .developer:hover{
+    text-decoration: underline;
+}

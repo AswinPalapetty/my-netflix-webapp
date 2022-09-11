@@ -1,0 +1,22 @@
+.categoryPosterRow{
+    color : #fff;
+    margin-top: 5rem!important;
+}
+
+.back-button{
+    background-color : red;
+    color : white;
+    font-weight: bold;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 9px;
+}
+
+.not-found-div{
+    text-align: center;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+

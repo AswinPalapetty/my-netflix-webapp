@@ -1,0 +1,12 @@
+.show-more-btn{
+    color: white;
+    background: red;
+    padding: 10px 27px;
+    border-radius: 12px;
+    transition: all 0.5s;
+    font-size: 1em;
+}
+
+.show-more-btn:hover{
+    transform: translateY(-4px);
+}
