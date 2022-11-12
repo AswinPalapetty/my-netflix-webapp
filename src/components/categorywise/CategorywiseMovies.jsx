@@ -10,7 +10,7 @@ function CategorywiseMovies(props) {
   const [page, setPage] = useState(1)
   const [totalPages, setTotalPages] = useState(1)
   const [content, setContent] = useState([])
-  const { notFound, setNotFound, query, setQuery } = useContext(searchContext)
+  const { query, setQuery } = useContext(searchContext)
 
   //This UseEffect is used to detect the change in page
   useEffect(() => {
@@ -44,7 +44,6 @@ function CategorywiseMovies(props) {
 
     setPage(1)
     setContent([])
-    setNotFound(false)
 
     if (query === '') {
       if (props.genreId) {
@@ -68,11 +67,9 @@ function CategorywiseMovies(props) {
         }
         else {
           setContent([])
-          setNotFound(true)
         }
       }).catch((err) => {
         setContent([])
-        setNotFound(true)
         console.log('err==' + err);
 
       })
@@ -113,7 +110,7 @@ function CategorywiseMovies(props) {
           </Row>
         </div>
 
-        {notFound &&
+        {/* {notFound &&
           <Row>
             <Col xs={12} md={12}>
               <div className='not-found-div'>
@@ -121,7 +118,7 @@ function CategorywiseMovies(props) {
                 <button className='back-button' onClick={() => { window.location.reload(false) }}><i class="fa-solid fa-backward"></i> Back</button>
               </div>
             </Col>
-          </Row>}
+          </Row>} */}
 
       </Container>
 

@@ -17,9 +17,7 @@
 }
 
 .footer .copyright{
-    color:#8f8d8d;
-    content: "/a";
-    white
+    opacity: 0.5;
 }
 
 .footer .developer{
@@ -29,4 +27,8 @@
 
 .footer .developer:hover{
     text-decoration: underline;
+}
+
+.footer a{
+    text-decoration: none;
 }

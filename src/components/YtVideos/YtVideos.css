@@ -1,0 +1,28 @@
+.modal-content{
+    background-color: transparent;
+}
+
+@media screen and (min-width : 768px){
+
+  .modal-content{
+        width: 560px;
+        height: 315px;
+    }
+
+     .youtube-video{
+        width: 560px;
+        height: 315px;
+    }
+}
+
+@media screen and (max-width : 767px){
+  .modal-content{
+        height: 190px;
+        width: 100%;
+    }
+
+     .youtube-video{
+        height: 190px;
+        width: 100%;
+    }
+}

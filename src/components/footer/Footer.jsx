@@ -12,7 +12,7 @@ function Footer() {
         <small className='options' onClick={()=>navigate('/viewAll/popular')}>Popular</small>
         <small className='options' onClick={()=>navigate('/contact')}>Contact us</small><br/>
         <small className='copyright'>© 2022 Copyright: </small><small>All rights reserved. Designed by </small>
-        <small className='developer'>ASWIN</small>
+        <a href='https://aswin-p-infoprism.github.io/My-Webpage/index.html'><small className='developer'>ASWIN</small></a>
     </div>
   )
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import NavBar from '../../components/navbar/NavBar'
 import Banner from '../../components/banner/Banner'
 import RowPost from '../../components/rowpost/RowPost'
@@ -11,7 +11,9 @@ import Footer from '../../components/footer/Footer';
 function Home() {
     const [showMore, setShowMore] = useState(false)
     const {setSearchBox} = useContext(searchContext)
-    setSearchBox(false)
+    useEffect(()=>{
+        setSearchBox(false)
+    },[])
     return (
         <div>
             <NavBar />
