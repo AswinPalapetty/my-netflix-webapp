@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Container, Modal, Row } from 'react-bootstrap'
+import { Col, Container, Modal, Row } from 'react-bootstrap'
 import './YtVideos.css'
 import YouTube from 'react-youtube';
 
@@ -27,17 +27,21 @@ function YtVideos(props) {
         <div>
             <Container fluid>
                 <h4>Videos</h4>
-                {
-                    videoDetails.map((video) => {
-                        return (
-                            <Row className='m-0'>
-                                <div className="col-md-3">
-                                    <img src={`https://img.youtube.com/vi/${video.key}/hqdefault.jpg`} alt='thumbnail' onClick={() => viewVideo(video.key)} />
-                                </div>
-                            </Row>
-                        )
-                    })
-                }
+                <Row>
+                    {
+                        videoDetails.map((video) => {
+                            return (
+                                <Col md={3} sm={6}>
+                                    <div className='video-thumbnail'>
+                                        <img src={`https://img.youtube.com/vi/${video.key}/mqdefault.jpg`} alt='thumbnail' width="100%" />
+                                        <i class="fa-solid fa-circle-play" onClick={() => viewVideo(video.key)}></i>
+                                        <div className='name mt-1'>{video.name}</div>
+                                    </div>
+                                </Col>
+                            )
+                        })
+                    }
+                </Row>
             </Container>
 
 

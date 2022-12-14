@@ -1,28 +1,135 @@
-.modal-content{
+.modal-content {
     background-color: transparent;
 }
 
-@media screen and (min-width : 768px){
+.video-thumbnail {
+    padding: 2%;
+}
 
-  .modal-content{
-        width: 560px;
-        height: 315px;
+.video-thumbnail img {
+    filter: brightness(70%);
+    transition: 1s ease;
+}
+
+.video-thumbnail:hover img{
+    transition: 1s ease;
+    opacity: 0.5;
+}
+
+.video-thumbnail .name{
+    transition: none;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+    position: relative;
+}
+
+.video-thumbnail:hover .name{
+    transition: none;
+}
+
+.video-thumbnail i{
+    position: relative;
+    left: 48%;
+    color: #fff;
+    cursor: pointer;
+    transition: 1s ease;
+}
+
+.video-thumbnail i:hover{
+    transform: scale(2.1);
+    transition: 1s ease;
+}
+
+@media screen and (max-width : 995px){
+    .video-thumbnail i{  
+        font-size: 20px;
+        bottom: 60px;
     }
 
-     .youtube-video{
-        width: 560px;
-        height: 315px;
+    .video-thumbnail .name{
+        bottom : 18px;
+    }
+}
+
+@media screen and (min-width : 994px){
+    .video-thumbnail i{  
+        font-size: 25px;
+        bottom: 77px;
+    }
+
+    .video-thumbnail .name{
+        bottom : 23px;
     }
 }
 
 @media screen and (max-width : 767px){
-  .modal-content{
+    .video-thumbnail i{  
+        font-size: 30px;
+        bottom: 104px;
+    }
+
+    .video-thumbnail .name{
+        bottom : 30px;
+    }
+}
+
+@media screen and (max-width : 630px){
+    .video-thumbnail i{  
+        font-size: 30px;
+        bottom: 83px;
+    }
+
+    .video-thumbnail .name{
+        bottom : 27px;
+    }
+}
+
+@media screen and (max-width : 575px){
+    .video-thumbnail i{  
+        font-size: 50px;
+        bottom: 150px;
+    }
+
+    .video-thumbnail .name{
+        bottom : 40px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .video-thumbnail i {
+        font-size: 50px;
+        bottom: 118px;
+    }
+}
+
+@media screen and (min-width : 768px) {
+
+    .modal-content {
+        width: 560px;
+        height: 315px;
+    }
+
+    .youtube-video {
+        width: 560px;
+        height: 315px;
+    }
+}
+
+@media screen and (max-width : 767px) {
+    .modal-content {
         height: 190px;
         width: 100%;
     }
 
-     .youtube-video{
+    .youtube-video {
         height: 190px;
         width: 100%;
+    }
+
+    .video-thumbnail {
+        padding: 4%;
     }
 }
