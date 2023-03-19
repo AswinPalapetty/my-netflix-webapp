@@ -55,6 +55,10 @@ header .header-menu .signIn {
     color: white;
 }
 
+header .header-menu .wishlist-button i:hover{
+    color: red;
+}
+
 @media screen and (min-width : 768px) {
     header .header-menu .search-box {
         position: fixed;
@@ -68,9 +72,23 @@ header .header-menu .signIn {
     .search-through-button {
         display: none;
     }
+
+    header .header-menu .wishlist-button{
+        position: fixed;
+        cursor: pointer;
+        font-size: 25px;
+    }
 }
 
 @media screen and (max-width : 767px) {
+
+    header .header-menu .wishlist-button{
+        position: fixed;
+        cursor: pointer;
+        font-size: 25px;
+    }
+
+
     header .header-menu .search-box {
         display: none;
     }

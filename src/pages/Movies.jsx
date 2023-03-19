@@ -6,6 +6,7 @@ import CategorywiseOriginals from '../components/categorywise/CategorywiseOrigin
 import CategorywisePopular from '../components/categorywise/CategorywisePopular';
 import {useParams} from 'react-router-dom'
 import { searchContext } from '../contexts/searchContext';
+import { wishlistContext } from '../contexts/wishlistContext';
 import axios from '../utilities/axios'
 import { API_KEY } from '../utilities/constants';
 import { useEffect } from 'react';
@@ -14,10 +15,12 @@ function Movies() {
     let params = useParams();
     const [genreId, setGenreId] = useState()
     const {setSearchBox} = useContext(searchContext)
+    const {setWishlist} = useContext(wishlistContext)
 
     useEffect(()=>{
 
       setSearchBox(true)
+      setWishlist(true)
       if(params.category !== 'trending' || params.category !== 'originals' || params.category !== 'popular'){
           axios.get(`/genre/movie/list?api_key=${API_KEY}&language=en-US`).then((response)=>{
             response.data.genres.forEach(object => {

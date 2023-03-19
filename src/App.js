@@ -8,6 +8,8 @@ import Movies from './pages/Movies';
 import EachMovie from './pages/EachMovie'
 import { authContext } from './contexts/FirebaseContext';
 import {getAuth,onAuthStateChanged} from 'firebase/auth'
+import EachOriginals from './pages/EachOriginals';
+import Wishlist from './components/wishlist/Wishlist';
 
 function App() {
 
@@ -35,6 +37,8 @@ function App() {
         <Route path='signin' element={user ? <Home /> : <Signin />} /> 
         <Route path='viewAll/:category' element={<Movies />}/>
         <Route path='movie/:id' element={<EachMovie />} />
+        <Route path='originals/:id' element={<EachOriginals />} />
+        <Route path='watchlist' element={<Wishlist />} />
       </Routes>
     </div>
   );

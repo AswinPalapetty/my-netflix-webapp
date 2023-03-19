@@ -1,0 +1,104 @@
+.tv-banner {
+    background-size: cover;
+    position: relative;
+}
+
+@media screen and (min-width : 768px) {
+    .tv-banner {
+        height: 448px;
+    }
+
+    .tv-description {
+        line-height: 1.3;
+    padding-top: 1rem;
+    font-size: 0.9rem;
+    max-width: 360px;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;
+    }
+
+    .tv-banner .tv-fade-left {
+        width: 45rem;
+        height: 100%;
+        background-image: linear-gradient(-90deg, transparent, rgba(37, 37, 37, 0.61), #111);
+    }
+}
+
+@media screen and (max-width : 767px) {
+    .tv-banner {
+        height: 210px;
+    }
+
+    .tv-description {
+        display: none;
+    }
+
+    .tv-fade-bottom {
+        padding-bottom: 220px;
+        height: 7.4rem;
+        background-image: linear-gradient(180deg, transparent, rgba(37, 37, 37, 0.61), #111);
+    }
+}
+
+.tv-content {
+    /* padding-top: 140px;
+    height : 190px;
+    padding-left: 15px; */
+    position: absolute;
+    bottom: 1rem;
+}
+
+.tv-title {
+    font-weight: 700;
+    margin-bottom: 2px;
+    display: flex;
+}
+
+.tv-banner-button {
+    background: rgba(51, 51, 51, 0.5);
+    color: #fff;
+    font-size: small;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 0.8rem;
+    padding: 0.3rem 1rem;
+}
+
+.tv-banner-button:hover {
+    background-color: #e6e6e6;
+    color: black;
+}
+
+.tv-stars-outer {
+    position: relative;
+    display: inline-block;
+}
+
+.tv-stars-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+  }
+
+  .tv-stars-outer::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: #ccc;
+  }
+
+  .tv-stars-inner::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #f8ce0b;
+  }

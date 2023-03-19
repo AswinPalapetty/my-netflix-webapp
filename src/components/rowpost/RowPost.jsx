@@ -31,7 +31,7 @@ function RowPost(props) {
                             let rating = Math.round(object.vote_average * 10) + '%'
                             return (
                                 <Col md={2} sm={4} xs={6}>
-                                    <div className='poster-details' onClick={() => navigate(`/movie/${object.id}`)}>
+                                    <div className='poster-details' onClick={() =>{props.type === 'movie' ? navigate(`/movie/${object.id}`) : navigate(`/originals/${object.id}`)}}>
                                         <img className='poster' alt={object.name || object.title} src={object.poster_path ? posterUrl + object.poster_path : netflixPoster} />
                                         <div className="text-center">
                                             <div className='posterName'>{object.name || object.title}</div>

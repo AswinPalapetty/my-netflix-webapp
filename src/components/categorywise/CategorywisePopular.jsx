@@ -7,6 +7,7 @@ import { Popular } from '../../utilities/categoryUrls'
 import './Categorywise.css'
 import { useContext } from 'react'
 import { searchContext } from '../../contexts/searchContext'
+import { useNavigate } from 'react-router-dom'
 
 function CategorywisePopular() {
 
@@ -14,6 +15,7 @@ function CategorywisePopular() {
   const [totalPages, setTotalPages] = useState(1)
   const [content, setContent] = useState([])
   const { query, setQuery } = useContext(searchContext)
+  const navigate = useNavigate()
 
   //This UseEffect is used to detect the change in page
   useEffect(() => {
@@ -96,7 +98,7 @@ function CategorywisePopular() {
               let rating = Math.round(object.vote_average * 10) + '%'
               return (
                 <Col md={2} sm={4} xs={6}>
-                  <div className='poster-details mb-4'>
+                  <div className='poster-details mb-4'  onClick={() => navigate(`/movie/${object.id}`)}>
                     <img className='poster' alt={object.name || object.title} src={object.poster_path ? posterUrl + object.poster_path : netflixPoster} />
                     <div className="text-center">
                       <div className='posterName'>{object.name || object.title}</div>

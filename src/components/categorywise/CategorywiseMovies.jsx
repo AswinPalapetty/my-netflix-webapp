@@ -5,12 +5,14 @@ import './Categorywise.css'
 import { API_KEY, posterUrl } from '../../utilities/constants'
 import { Col, Container, Row } from 'react-bootstrap'
 import netflixPoster from '../../images/netflixPoster.jpg'
+import { useNavigate } from 'react-router-dom'
 
 function CategorywiseMovies(props) {
   const [page, setPage] = useState(1)
   const [totalPages, setTotalPages] = useState(1)
   const [content, setContent] = useState([])
   const { query, setQuery } = useContext(searchContext)
+  const navigate = useNavigate()
 
   //This UseEffect is used to detect the change in page
   useEffect(() => {
@@ -94,7 +96,7 @@ function CategorywiseMovies(props) {
               let rating = Math.round(object.vote_average * 10) + '%'
               return (
                 <Col md={2} sm={4} xs={6}>
-                  <div className='poster-details mb-4'>
+                  <div className='poster-details mb-4' onClick={() => navigate(`/movie/${object.id}`)}>
                     <img className='poster' alt={object.name || object.title} src={object.poster_path ? posterUrl + object.poster_path : netflixPoster} />
                     <div className="text-center">
                       <div className='posterName'>{object.name || object.title}</div>

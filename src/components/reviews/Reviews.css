@@ -1,0 +1,43 @@
+.user-review{
+    margin-bottom: 2.5rem!important;
+}
+
+.user-review .user-image{
+    border-radius: 100%;
+    max-width: 5%;
+}
+
+.user-review .username{
+    display: inline-block;
+    font-weight: 650;
+    margin-left: 0.5rem!important;
+    margin-right: 0.5rem!important;
+}
+
+.user-review .review-content{
+    margin-top: 0.4rem;
+}
+
+.user-review .star::before{
+    display: inline-block;
+    content: "\f005";
+    font-family: "Font Awesome 6 Free";
+    color: #f8d84b;
+}
+.user-review .star{
+    display: inline-block;
+}
+
+.badge-color {
+    --bs-bg-opacity: 1;
+    background-color: darkslategray!important;
+}
+
+.rating, .rating-section{
+    display: inline-block;
+    margin-right: 0.2rem;
+}
+
+.rating{
+    font-weight: 300;
+}
