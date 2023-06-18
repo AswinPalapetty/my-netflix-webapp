@@ -11,13 +11,13 @@ import Reviews from '../components/reviews/Reviews'
 import Footer from '../components/footer/Footer'
 import NavBar from '../components/navbar/NavBar'
 import { searchContext } from '../contexts/searchContext'
-import { wishlistContext } from '../contexts/wishlistContext'
+import { watchlistContext } from '../contexts/watchlistContext'
 
 function EachOriginals() {
 
   let params = useParams()
   const {setSearchBox} = useContext(searchContext)
-  const {setWishlist} = useContext(wishlistContext)
+  const {setWatchlist} = useContext(watchlistContext)
   const [seasons, setSeasons] = useState([])
   const [videoDetails,setVideoDetails] = useState(null)
   const [cast,setCast] = useState(null)

@@ -6,16 +6,16 @@ import './Home.css';
 import { Action, Comedy, Horror, Originals, Animation, Romance, Trending, Popular, Adventure, Crime, Drama, Family, Science_fiction, Mystery, Thriller } from '../../utilities/categoryUrls' 
 import { useContext } from 'react';
 import { searchContext } from '../../contexts/searchContext';
-import { wishlistContext } from '../../contexts/wishlistContext';
+import { watchlistContext } from '../../contexts/watchlistContext';
 import Footer from '../../components/footer/Footer';
 
 function Home() {
     const [showMore, setShowMore] = useState(false)
     const {setSearchBox} = useContext(searchContext)
-    const {setWishlist} = useContext(wishlistContext)
+    const {setWatchlist} = useContext(watchlistContext)
     useEffect(()=>{
         setSearchBox(false)
-        setWishlist(true)
+        setWatchlist(true)
     },[])
     return (
         <div>

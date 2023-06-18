@@ -55,7 +55,7 @@ header .header-menu .signIn {
     color: white;
 }
 
-header .header-menu .wishlist-button i:hover{
+header .header-menu .watchlist-button i:hover{
     color: red;
 }
 
@@ -73,7 +73,7 @@ header .header-menu .wishlist-button i:hover{
         display: none;
     }
 
-    header .header-menu .wishlist-button{
+    header .header-menu .watchlist-button{
         position: fixed;
         cursor: pointer;
         font-size: 25px;
@@ -82,7 +82,7 @@ header .header-menu .wishlist-button i:hover{
 
 @media screen and (max-width : 767px) {
 
-    header .header-menu .wishlist-button{
+    header .header-menu .watchlist-button{
         position: fixed;
         cursor: pointer;
         font-size: 25px;

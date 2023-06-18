@@ -5,15 +5,15 @@ import { authContext } from '../../contexts/FirebaseContext'
 import { getAuth, signOut } from 'firebase/auth'
 import './NavBar.css'
 import { searchContext } from '../../contexts/searchContext';
-import { wishlistContext } from '../../contexts/wishlistContext';
+import { watchlistContext } from '../../contexts/watchlistContext';
 import { useEffect } from 'react';
 
 function NavBar() {
 
     const navigate = useNavigate()
     const { user, setUser } = useContext(authContext)
-    const { searchBox, query, setQuery } = useContext(searchContext)
-    const { wishlist } = useContext(wishlistContext)
+    const { searchBox, setQuery } = useContext(searchContext)
+    const { watchlist } = useContext(watchlistContext)
     const [backColor, setBackColor] = useState(false);
     const [searchBar, setSearchBar] = useState(false);
     const [width, setWidth] = useState(true)
@@ -24,21 +24,6 @@ function NavBar() {
 
     useEffect(() => {
         setQuery('')
-        const handleResize = () => {
-            if (window.innerWidth >= 767) {
-                setWidth(true);
-                console.log(window.innerWidth);
-            }
-            else {
-                setWidth(false);
-            }
-        }
-        window.addEventListener('resize', handleResize)
-    }, [])
-
-    useEffect(() => {
-        setQuery('')
-        console.log("change in size>>>");
         const handleResize = () => {
             if (window.innerWidth >= 767) {
                 setWidth(true);
@@ -77,7 +62,7 @@ function NavBar() {
                 <div className="header-menu">
                     <img onClick={() => navigate('/')} className='logo' src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1920px-Netflix_2015_logo.svg.png" alt="Netflix logo" />
 
-                    <div className='wishlist-button' style={{ right: `${searchBox ? width ? '405px' : '200px' : '170px'}` }} onClick={() => navigate('/watchlist')}>{wishlist ?
+                    {/* <div className='watchlist-button' style={{ right: `${searchBox ? width ? '405px' : '200px' : '170px'}` }} >{watchlist ?
                         <OverlayTrigger
                             placement="left"
                             delay={{ show: 250, hide: 400 }}
@@ -85,7 +70,7 @@ function NavBar() {
                         >
                             <i class="fa-solid fa-heart"></i>
                         </OverlayTrigger> : ''
-                    }</div>
+                    }</div> */}
 
                     {searchBox && <Form.Control
                         type="search"

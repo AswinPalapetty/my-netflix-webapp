@@ -7,18 +7,18 @@ import { firebaseContext } from './contexts/FirebaseContext';
 import { firebase } from './firebase/Config';
 import Context from './contexts/FirebaseContext';
 import Search from './contexts/searchContext';
-import Wishlist from './contexts/wishlistContext';
+import Watchlist from './contexts/watchlistContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <firebaseContext.Provider value={{ firebase }}>
         <Context>
             <Search>
-                <Wishlist>
+                <Watchlist>
                     <Router>
                         <App />
                     </Router>
-                </Wishlist>
+                </Watchlist>
             </Search>
         </Context>
     </firebaseContext.Provider>

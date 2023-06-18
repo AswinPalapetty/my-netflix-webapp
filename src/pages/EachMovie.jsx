@@ -10,12 +10,12 @@ import NavBar from '../components/navbar/NavBar'
 import Related from '../components/related/Related'
 import Reviews from '../components/reviews/Reviews'
 import Footer from '../components/footer/Footer'
-import { wishlistContext } from '../contexts/wishlistContext'
+import { watchlistContext } from '../contexts/watchlistContext'
 
 function EachMovie() {
   let params = useParams()
   const {setSearchBox} = useContext(searchContext);
-  const {setWishlist} = useContext(wishlistContext);
+  const {setWatchlist} = useContext(watchlistContext);
   const [videoDetails, setVideoDetails] = useState(null)
   const [cast, setCast] = useState(null)
   const [related,setRelated] = useState(null)
@@ -24,7 +24,7 @@ function EachMovie() {
   useEffect(() => {
 
     setSearchBox(false)
-    setWishlist(true)
+    setWatchlist(true)
     
     axios.get(`movie/${params.id}/videos?api_key=${API_KEY}&language=en-US`).then(videos => {
       if (videos.data.results.length !== 0) {
